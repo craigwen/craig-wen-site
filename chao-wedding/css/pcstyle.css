@@ -1,0 +1,21 @@
+.calendar p{
+	/*font-size: 8.6pt;*/
+	font-size: 10px;
+	line-height: 1.4em;
+}
+	
+.bio{
+	width: 420px;
+	height: 180px;
+	/*font-size: 9pt;*/
+	font-size: 11px;
+	position: absolute;
+	/*border: 2px solid;*/
+}
+
+.email{font-size:13px;}
+
+
+
+
+

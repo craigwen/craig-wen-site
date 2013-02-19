@@ -1,0 +1,221 @@
+/*** Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {	margin: 0;	padding: 0;	border: 0;	font-size: 100%;	font: inherit;	vertical-align: baseline; color: inherit;}/* HTML5 display-role reset for older browsers */article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {	display: block;}body {	line-height: 1;}ol, ul {	list-style: none;}blockquote, q {	quotes: none;}blockquote:before, blockquote:after,q:before, q:after {	content: '';	content: none;}table {	border-collapse: collapse;	border-spacing: 0;}a{text-decoration: none;}
+/********/
+
+body {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+  	margin: 0 auto;
+	color: #535353;
+	background-image: url('../img/debut_light.png');
+	text-rendering: optimizeLegibility;
+}
+
+a {color: #DC391C;}
+a.link:hover{text-decoration: underline;}
+a.dotted {color: #535353; border-bottom: dotted 1px #535353;}
+a.dotted:hover{text-decoration: none; border-bottom: none;}
+
+p {
+	font-size: 0.9em;
+	margin: 0.8em 0;
+	line-height: 1.5;
+}
+
+#wrapper { display: block; margin: 0 auto; max-width: 1200px;}
+#projects {padding: 1em 0 0 0;}
+#projects h2{
+ 	font-size: 4.2em;
+	margin: 0.3em 2%;
+}
+
+section img {
+	float:left;
+	-webkit-box-shadow: 0 0 15px #a1a1a1;
+	box-shadow: 0 0 15px #a1a1a1;
+	margin-bottom: 3.6em;
+	width: 55%;
+}
+
+h1 {
+	font-family: 'Libre Baskerville',Times, serif;
+	font-weight: 400;
+	text-align: left;
+	font-size: 2.65em;
+ 	margin: 0.2em 2%;
+	line-height: 1;
+}
+
+/***Adjust Kerning in WEN - Libre Baskerville***/
+h1 span {margin-left: -0.110em;}
+@-moz-document url-prefix() {
+	h1 span {margin-left: -0.05em;}
+}
+
+
+h2 {
+	font-family: 'Libre Baskerville',Times, serif;
+	font-style: italic;
+	font-weight: 400;
+}
+
+hgroup h2{
+	font-size: 1em;
+	margin-left: 0.5em;
+	margin-bottom: 1em;
+	line-height: 1.4;
+}
+
+h3 {
+	font-family: 'Libre Baskerville', Times, serif;
+	font-weight: 700;
+	font-size: 1em;
+	margin-bottom: 0.1em;
+}
+
+header{width: 20%; float: left; position: fixed; padding: 0.5em 0.7% 0 0;}
+
+hgroup {float: left;}
+
+.menu-button {
+	display: none;
+	padding: 0.9em 0 0.9em 0.5em;
+	background: white;
+	background-image: url('../img/down-arrow.png');
+	background-repeat: no-repeat;
+	background-position: 95% 22px;
+	cursor: pointer;
+	font-size: 1.4em;
+}
+
+nav ul {margin: 0.5em 0; clear:left; margin-left: 2%;}
+nav li {
+	font-family: 'Raleway', verdana, sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: #DC391C;
+	line-height: 1.3;
+}
+nav li a {padding: 0.2em;}
+nav li a:hover {background: white;}
+
+#content {margin-left: 22%; width: 76%; max-width: 1080px;}
+
+.blocks {
+	clear: both;
+	border-top: 1px solid #d3d3d3; border-bottom: 1px solid #d3d3d3;
+	padding: 1.4em 0;
+	overflow: hidden;
+}
+
+.blocks h3 {
+		font-weight: 400;
+		font-size: 2em; 
+		padding: 0.1em 0;
+}
+
+.project-description {
+	padding: 0 2.5%;
+	width: 40%;
+	float: left;
+}
+
+.link {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	font-size: 1.09em;
+}
+
+#tools {border-top: none;}
+#tools ul{margin-top: 0.5em;}
+#tools li{
+	font-size: 0.9em;
+	display: block;
+	line-height: 1.5;
+	margin-bottom: 0.5em;
+}
+
+#contact ul {
+	clear: both;
+	text-align: center;
+	margin: 2.5em 2%;
+}
+
+#contact li {
+	padding-right: 2em;
+	display: inline-block;
+}
+#contact li:last-child {padding-right: 0;}
+#contact a:hover{
+	opacity: 0.6;
+	transition: opacity 0.3s linear;
+	-webkit-transition: opacity 0.3s linear;	
+	-moz-transition: opacity 0.3s linear;		
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=60)";
+}
+
+footer {clear: both; text-align: center; font-size: 0.7em; line-height: 1.5;}
+
+/*********************/
+/****Mobile Styles****/
+/*********************/
+
+@media screen and (max-width: 960px){
+/* 	#content {margin-left: 24%; width: 76%;} */
+ 	section{clear:left;}
+	section img{width: 47%;}	
+	.project-description {width: 48%;}
+}
+
+@media screen and (max-width: 850px){
+	header{position:inherit; width: 99%;}
+	
+	hgroup{margin-right: 4%;}
+	
+	nav li{font-size: 0.9em; line-height: 1.4;}
+	
+	
+	/*
+[role='navigation'] {	
+		display: block;
+	} 
+*//***ensures menu always shows up***/	
+	
+	#content {clear:left; width: 98%; margin: 0 1%;}
+	nav ul {clear: none;}
+	.project-description {
+		float: none;
+		clear:left;
+		margin: 0 0 1.5em 0;
+		width: 95%;
+		max-width: none;
+	}
+	
+	section img{
+		float: none;
+		width: 100%;
+		margin-bottom: 1em;
+	}
+	
+	#about, .blocks {padding: 1em 3%;}
+}
+
+@media screen and (max-width: 640px){
+	.menu-button{display: block;}
+	nav{clear:left;}
+	nav ul {margin:0;}
+	nav li {
+		font-size: 1.1em; 
+		padding: 0.9em 0; 
+		text-align: center;
+		background: white; 
+		border-bottom: 1px solid #d3d3d3;
+	}
+	nav li:first-child {border-top: 1px solid #d3d3d3;}
+	nav li a {padding: 0.9em 20%;}
+	nav li a:hover {text-decoration: underline;}
+	.flexNav-touch [role='navigation'],
+	.flexNav-no-touch [role='navigation'] {	
+		display: none;
+	}	
+}

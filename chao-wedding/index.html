@@ -1,0 +1,644 @@
+<!--Design by Lynn Kiang: http://www.lynnkiang.com-->
+<!--Code by Craig Wen-->
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="x-ua-compatible" content="IE=8">
+	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css"/>
+	<title>Celene and Phil are Getting Married</title>
+	<script type="text/javascript" src="javascript/jquery-1.3.2.min.js"></script>
+	<script type="text/javascript" src="javascript/jquery.scrollTo-1.4.2.js"></script>
+	<!--javascript code from http://www.queness.com/post/356/create-a-vertical-horizontal-and-diagonal-sliding-content-website-with-jquery-->
+	
+	<!-- Resize code -->
+	<script>	
+		$(document).ready(function() {
+			
+			//get all link with class panel
+		    $('a.panel').click(function () {
+
+		        //reset and highlight the clicked link
+		        $('a.panel').removeClass('selected');
+		        $(this).addClass('selected');
+
+		        //grab the current item, to be used in resize function
+		        current = $(this);
+
+		                //scroll it to the destination
+		        $('#wrapper').scrollTo($(this).attr('href'), 1300);      
+
+		                //cancel the link default behavior
+		        return false;
+		    });
+
+		    //resize all the items according to the new browser size
+		    $(window).resize(function () {
+		        //call the resizePanel function
+		        resizePanel();
+		    });			
+		});
+		
+		function resizePanel() {
+
+		    //get the browser width and height
+		    width = $(window).width();
+		    height = $(window).height();
+
+		    //get the mask width: width * total of items
+		    mask_width = width * $('.item').length;
+			
+			// $('#debug').html(width  + ' ' + height + ' ' + mask_width);
+
+		    //set the dimension 
+		    $('#wrapper, .item').css({width: width, height: height});
+		    $('#mask').css({width: mask_width, height: height});
+
+		    //if the item is displayed incorrectly, set it to the corrent pos
+		    $('#wrapper').scrollTo($('a.selected').attr('href'), 0);
+		}
+	</script>
+	
+	<!-- Loads PC CSS if detects Windows platform -->
+	<script type="text/javascript">
+
+		/***********************************************
+		* Different CSS depending on OS (mac/pc)- © Dynamic Drive (www.dynamicdrive.com)
+		* This notice must stay intact for use
+		* Visit http://www.dynamicdrive.com/ for full source code
+		***********************************************/
+
+		var csstype="external" //Specify type of CSS to use. "Inline" or "external"
+
+		var mac_css='body{font-size: 14pt; }' //if "inline", specify mac css here
+		var pc_css='body{font-size: 12pt; }' //if "inline", specify PC/default css here
+
+		var mac_externalcss='/css/styles.css' //if "external", specify Mac css file here
+		var pc_externalcss='/css/pcstyle.css'   //if "external", specify PC/default css file here
+
+		///////No need to edit beyond here////////////
+
+		var mactest=navigator.userAgent.indexOf("Mac")!=-1
+		if (csstype=="inline"){
+		document.write('<style type="text/css">')
+		if (mactest)
+		document.write(mac_css)
+		else
+		document.write(pc_css)
+		document.write('</style>')
+		}
+		else if (csstype=="external")
+		document.write('<link rel="stylesheet" type="text/css" href="'+ (mactest? mac_externalcss : pc_externalcss) +'">')
+
+	</script>
+
+</head>
+	
+	
+<body>
+<div id="wrapper">
+    <div id="mask">
+ 		
+        <!-- first row -->
+ 
+		<div id="item1" class="item"> <!--!Starting Page-->
+            <a name="item1"></a>
+            <div class="content">
+				<img class="borderhome" src="assets/border_home.png"></img>
+				<img class="hometitle" src="assets/homeTitle.png"></img>
+				<a href="#disabled" class="panel" alt="Our Story" title="This link has been disabled by request"><img class="ourstory" src="assets/1story.png"></img></a>
+				<a href="#disabled" class="panel" alt="Wedding Party" title="This link has been disabled by request"><img class="weddingparty" src="assets/2party.png"></img></a>
+				<a href="#item24" class="panel" alt="Wedding Information"><img class="weddinginformation" src="assets/3info.png"></img></a>
+				<a href="#item13" class="panel" alt="Accommodations"><img class="accommodations" src="assets/4accommodations.png"></img></a>
+				<a href="#item22" class="panel" alt="Registries"><img class="registries" src="assets/5registries.png"></img></a>
+				<a href="#item17" class="panel" alt="What to do in Boston"><img class="whattodo" src="assets/6whattodo.png"></img></a>
+				<div class="email" alt="Email us"> <a href="mailto:celeneandphil@gmail.com">CELENEANDPHIL@GMAIL.COM</a></div>
+			</div>
+        </div>
+         
+        <div id="item2" class="item">
+        	 <a name="item2"></a>
+	         <div class="content"></div>
+        </div>
+
+        <div id="item3" class="item"><!--!Wedding Party-->
+       	 <a name="item3"></a>
+         <!--<div class="content">
+         	<img class="borderhome" src="assets/border_party.png"></img>
+			<a href="#item1" class="panel"><img class="header" src="assets/header_party.png" alt="Go back home" title="Go back home"></img></a>
+			<div class="jen bio">
+				<img class="portrait" src="assets/party_jen.jpg">
+				<h3>JEN</h3>
+				<p>Jen and Celene share memories back to age 7, when they had sleepovers for birthday parties and played 'piggly-wiggly' late into the night. They went to college in different cities, but have lived within walking distance for all the other years they've known each other. However, those years of being physically close would have been inconsequential without their ability to understand one another so well – they <em>always</em> seem to be on the same wavelength.</p>
+			</div>
+			<div class="jon bio">
+				<img class="portrait" src="assets/party_jon.jpg"></img>
+				<h3>JON</h3>
+				<p>Jon and Tim grew up in the same town, went to the same church, and got into the same trouble. The gang (Jon, Tim, Aaron, Alan, and Phil) spent their teen years tormenting Sunday school teachers to tears but eventually grew up together to become dashing young men. Phil was honored to stand in Jon's wedding and is honored to have Jon stand in his.</p>
+			</div>
+			<br />
+			<div class="hannah bio">
+				<img class="portrait" src="assets/party_hannah.jpg"></img>
+				<h3>HANNAH</h3>
+				<p>Celene is Hannah's #1 fan – she's so proud of her for going after her pursuits in journalism full throttle. Although they met in high school, they grew especially close during and after college when their common (especially Celene's) faith solidified. Although they have never lived in the same city since high school, they're hanging on to the hope that they'll grow old as neighbors.</p>
+			</div>
+			<br />
+			<div class="tim bio">
+				<img class="portrait" src="assets/party_tim.jpg"></img>
+				<h3>TIM</h3>
+				<p>Tim and Phil met in a Highrock small group and instantly connected through their Chinese camp and Chinese church backgrounds. As Phil's accountability partner, Tim has been a pillar of support and encouragement in Phil's faith. There is almost nothing Tim wouldn't do for a friend, and Phil is lucky and blessed to have him as one.</p>
+			</div>
+			<br />
+			<br />
+			<ul class="navmenu">
+				<li class="storybutton"><a href="#item6" class="panel">Story</a></li>
+				<li class="partybutton"><a href="#item3" class="panel">Party</a></li>
+				<li class="infobutton"><a href="#item24" class="panel">Info</a></li>
+				<li class="accommodationsbutton"><a href="#item13" class="panel">Accommodations</a></li>
+				<li class="registriesbutton"><a href="#item22" class="panel">Registries</a></li>
+				<li class="whattodobutton"><a href="#item17" class="panel">WhatToDo</a></li>
+			</ul>
+         </div>-->   	
+        </div>
+        
+        <div id="item4" class="item">
+        	<a name="item4"></a>
+	        <div class="content"></div>
+        </div>
+         
+        <div id="item5" class="item">
+            <a name="item5"></a>
+            <div class="content"></div>
+        </div>
+
+        <div class="clear"></div>   
+
+        <!-- second row -->   
+ 		<!--Our Story1-->
+        <div id="item6" class="item"><!--!Our Story 1-->
+        	<a name="item6"></a>
+	        <!--<div class="content">				
+				<img class="borderhome" src="assets/border_ourstory.png"></img>
+				<a href="#item1" class="panel"><img class="year" src="assets/header2008.png" alt="Go back home" title="Go back home"></img></a>
+				<ol class="calendar">
+					<li>
+						<img class="month" src="assets/2008jan.png"></img><br/>
+						<h2>Post-fellowship hangout at a bar and a Highrocker's* apartment.</h2>
+						<p><span class="dialogue">C:</span> Although this is my first memory of meeting Phil, we barely exchange words amidst the group hang-out.</p>
+						<p><span class="dialogue">C:</span> (noting his deep voice):<em>Do you sing?</em></p>
+						<p><span class="dialogue">P:</span> <em>No.</em></p>
+						<p>Needless to say, I didn't have much of an impression of him, good or bad.</p>
+						<p><span class="postscript">*Highrock is a church outside Boston we both attend.</span></p>
+					</li>
+					<li>
+						<img class="month" src="assets/2008feb.png"></img><br />
+						<h2>Highrock's Annual Valentine's Day Alternative Event</h2>
+						<img src="assets/pinkphil.jpg" class="pinkphil"></img>
+						<p style="margin-top: 240px;"><span class="dialogue">C:</span> I notice Phil because of his baby pink blazer among a sea of gray and black suits. I judge him and assume he must be pretty arrogant.</p> 
+					</li>
+					<li>
+						<img class="month" src="assets/2008mar.png"></img><br />
+						<h2>Korean BBQ Dinner</h2>
+						<p><span class="dialogue">C:</span> A group of guys from the Highrock event wins a Korean BBQ dinner hosted at my apartment, and Phil is among them. The first time we really get to talk, this is when I think maybe we could be friends.</p>
+						<p><span class="dialogue">P:</span> Although Celene and I had met before, I first gained an impression of her here. Before dinner started, I noticed that she was going between the kitchen and the dining room, cooking, setting the table, making sure everything was ready. She was reserved and quiet during most of the meal, but when she spoke she was very poignant and raised the level of conversation. I respected this and found it very intriguing.</p>
+					</li>
+					<li>
+						<img class="month" src="assets/2008may.png"></img><br />
+						<h2>D.T.R. in the Public Garden</h2>
+						<p><span class="dialogue">C:</span> Near the beginning of our friendship we have a D.T.R.* over Upper Crust pizza – defining our relationship as strictly on the 'friend' side...</p>
+						<p><span class="postscript">* If you don't know what DTR means, check Urban Dictionary.</span></p>
+					</li>
+					<li>
+						<img class="month" src="assets/2008oct.png"></img><br />
+						<h2>D.T.R. #2</h2>
+						<p><span class="dialogue">C:</span> ...that is, until October when we re-define things a bit.</p>
+						<p><span class="dialogue">P:</span> My favorite memory from the pre-dating stage were the runs we went on during the summer between these DTRs. I was impressed that Celene enjoyed exercise and was motivated to do it regularly. My favorite part of the runs were the times we stopped to stretch and just talk about who we were, how we got there, and where we wanted to go.</p>
+					</li>
+				</ol>
+				<a href="#item7" class="panel"><img class="right" src="assets/right2009.png"></img></a>
+				<ul class="navmenu">
+					<li class="storybutton"><a href="#item6" class="panel">Story</a></li>
+					<li class="partybutton"><a href="#item3" class="panel">Party</a></li>
+					<li class="infobutton"><a href="#item24" class="panel">Info</a></li>
+					<li class="accommodationsbutton"><a href="#item13" class="panel">Accommodations</a></li>
+					<li class="registriesbutton"><a href="#item22" class="panel">Registries</a></li>
+					<li class="whattodobutton"><a href="#item17" class="panel">WhatToDo</a></li>
+				</ul>
+			</div> -->
+        </div>
+
+		<div id="item7" class="item"><!--!Our Story 2-->
+        	<a name="item7"></a>
+	        <!--<div class="content">
+				<img class="borderhome" src="assets/border_ourstory.png"></img>
+				<a href="#item1" class="panel"><img class="year" src="assets/header2009.png" alt="Go back home" title="Go back home"></img></a>
+				<img class="runningright" src="assets/kids2009.png"></img>
+				<img class="couple2009" src="assets/couple2009.jpg"></img>
+				<a href="#item8" class="panel"><img class="right" src="assets/right2010.png"></img></a>
+				<a href="#item6" class="panel"><img class="left" src="assets/left2008.png"></img></a>
+				<ul class="navmenu">
+					<li class="storybutton"><a href="#item6" class="panel">Story</a></li>
+					<li class="partybutton"><a href="#item3" class="panel">Party</a></li>
+					<li class="infobutton"><a href="#item24" class="panel">Info</a></li>
+					<li class="accommodationsbutton"><a href="#item13" class="panel">Accommodations</a></li>
+					<li class="registriesbutton"><a href="#item22" class="panel">Registries</a></li>
+					<li class="whattodobutton"><a href="#item17" class="panel">WhatToDo</a></li>
+				</ul>
+			</div>-->        	
+        </div>
+
+        <div id="item8" class="item"><!--!Our Story 3-->
+        	<a name="item8"></a>
+	        <!--<div class="content">
+	        	<img class="borderhome" src="assets/border_ourstory.png"></img>
+				<a href="#item1" class="panel"><img class="year" src="assets/header2010.png" alt="Go back home" title="Go back home"></img></a>
+				<img class="runningleft" src="assets/kids2010.png"></img>
+				<img class="couple2010" src="assets/couple2010.png"></img>
+				<a href="#item9" class="panel"><img class="right" src="assets/right2011.png"></img></a>
+				<a href="#item7" class="panel"><img class="left" src="assets/left2009.png"></img></a>
+				<ul class="navmenu">
+					<li class="storybutton"><a href="#item6" class="panel">Story</a></li>
+					<li class="partybutton"><a href="#item3" class="panel">Party</a></li>
+					<li class="infobutton"><a href="#item24" class="panel">Info</a></li>
+					<li class="accommodationsbutton"><a href="#item13" class="panel">Accommodations</a></li>
+					<li class="registriesbutton"><a href="#item22" class="panel">Registries</a></li>
+					<li class="whattodobutton"><a href="#item17" class="panel">WhatToDo</a></li>
+				</ul>
+	        </div> -->     	
+        </div>
+                
+        <div id="item9" class="item"><!--!Our Story 4-->
+            <a name="item9"></a>
+            <!--<div class="content">
+            	<img class="borderhome" src="assets/border_ourstory.png"></img>
+				<a href="#item1" class="panel"><img class="year" src="assets/header2011.png" alt="Go back home" title="Go back home"></img></a>
+				<a href="#item10" class="panel"><img class="right" src="assets/right2012.png"></img></a>
+				<a href="#item8" class="panel"><img class="left" src="assets/left2010.png"></img></a>
+				<ol class="calendar">
+					<li>
+						<img class="month" src="assets/2011aug.png"></img><br />
+						<h2>Meet the Parents</h2>
+						<p><span class="dialogue">C:</span> Fast forward three years, when Phil decides it's a good time to ask my parents for their blessing. His attempt to keep it a secret from me is thwarted by my brother – but he doesn't find that out until after it happens. However, what I didn't know was that Phil had met a jeweler that same day.</p>
+						<p><span class="dialogue">P:</span> The week between the call to Celene's parents to ask permission and the actual meeting itself was very interesting. I had called Celene's parents on Sunday and asked to have lunch with them so we could talk about Celene and me. I thought I had asked them not to mention it to Celene, but she got word of it on Tuesday. For those next couple of days, I was actually quite at peace and looking forward to the lunch, while Celene was nervous and worried. I didn't find out that she knew until after the lunch, and we both had a good laugh over the phone.</p>
+					</li>
+					<li>
+						<img class="month" src="assets/2011sep.png"></img><br />
+						<h2>Under the Rain in Radcliffe with the Ring</h2>
+						<p><span class="dialogue">C:</span> Although I suspect the proposal is going to happen, a small part of me doubts because I didn't think he had the ring. My doubts grow when I relay my suspicion to Hannah (my bridesmaid), who responds with feigned shock and hurt that she hadn't been told. <em>Sneaky!</em></p>
+						<p>On my way home from work, Phil meets me in Harvard Square. He had wanted to replicate the environment of our first DTR in the Public Garden, but the weather didn't cooperate – and neither did I. When he asked if I wanted Upper Crust Pizza, I suggested something else. As we walk past the Radcliffe Institute garden, he says</p>
+						<p><span class="dialogue">P:</span> "Let's go in there!"</p>
+						<p><span class="dialogue">C:</span> "Umm, no, it's raining."</p>
+						<p>But he keeps insisting, and when he drags me in through the gate I know what is happening.</p>
+						<p>The next day, he surprises me with an extravagant picnic in Central Park, NYC – complete with food, balloons, and many of our close friends.</p>
+					</li>
+				</ol>
+				<ul class="navmenu">
+					<li class="storybutton"><a href="#item6" class="panel">Story</a></li>
+					<li class="partybutton"><a href="#item3" class="panel">Party</a></li>
+					<li class="infobutton"><a href="#item24" class="panel">Info</a></li>
+					<li class="accommodationsbutton"><a href="#item13" class="panel">Accommodations</a></li>
+					<li class="registriesbutton"><a href="#item22" class="panel">Registries</a></li>
+					<li class="whattodobutton"><a href="#item17" class="panel">WhatToDo</a></li>
+				</ul>
+            </div>-->
+        </div>
+        
+        <div id="item10" class="item"><!--!Our Story 5-->
+            <a name="item10"></a>
+            <!--<div class="content">
+            		<img class="borderhome" src="assets/border_ourstory.png"></img>
+					<a href="#item1" class="panel"><img class="year" src="assets/header2012.png" alt="Go back home" title="Go back home"></img></a>
+					<a href="#item9" class="panel"><img class="left" src="assets/left2011.png"></img></a>
+					<img class="engaged" src="assets/2012jul.png"></img><br />
+					<img class="couple2012" src="assets/couple2012.png"></img>
+					<div class="calendar">
+						<h2>Our Wedding!</h2>
+						<p class="celebrate">We're so excited to have you celebrate
+						with us on this crazy, momentous day!</p>
+					</div>
+					<ul class="navmenu">
+						<li class="storybutton"><a href="#item6" class="panel">Story</a></li>
+						<li class="partybutton"><a href="#item3" class="panel">Party</a></li>
+						<li class="infobutton"><a href="#item24" class="panel">Info</a></li>
+						<li class="accommodationsbutton"><a href="#item13" class="panel">Accommodations</a></li>
+						<li class="registriesbutton"><a href="#item22" class="panel">Registries</a></li>
+						<li class="whattodobutton"><a href="#item17" class="panel">WhatToDo</a></li>
+					</ul>
+            </div>-->
+        </div>
+        <div class="clear"></div>
+
+        
+        <!-- third row -->
+
+        <div id="item11" class="item">
+            <a name="item11"></a>
+            <div class="content"></div>
+        </div>
+        
+         <div id="item12" class="item">
+            <a name="item12"></a>
+            <div class="content"></div>
+        </div>
+        		        
+       	<div id="item13" class="item"><!--!Accommodations-->
+            <a name="item13"></a>
+            <div class="content">
+				<img class="borderhome" src="assets/border_accommodations.png"></img>
+				<a href="#item1" class="panel"><img class="header_accommodations" src="assets/header_accommodations.png" alt="Go back home" title="Go back home"></img></a>
+				<div id="acc_left">
+					<p class="greytext">Discounted group rates have been reserved at the Charles Hotel in Harvard Square (one hour from wedding site) and the Embassy Suites in Marlborough (15 min from wedding site).</p>
+				</div>
+				<div id="acc_middle">
+					<h3>CHARLES HOTEL</h3>
+					<p class="borderbottom" style="margin-top:0px;">1 Bennett Street<br />
+					Cambridge, MA 02138</p>
+					<p class="borderbottom" style="font-size:9pt;">Single and double rooms for $219 per night.<br />		
+						<em>Rates held until June 29, 2012.</em>
+					</p>
+					<h2>BY PHONE</h2>
+					<p class="smalltext">Call the hotel at (617)864-1200<br />
+					or toll free at (800)882-1818<br /></p>
+					<p class="smalltext">Booking hours are Mon-Fri, 8 AM – 7 PM and Sat, 9 AM – 4 PM.</p>
+					<p class="borderbottom smalltext">Please request the <b>Celene and Phil Wedding</b> room block in order to receive the agreed upon Group Rate.</p>
+					<h2>ONLINE</h2>
+					<p class="smalltext">Click "Reservations" on the lower left hand side of the <a href="http://www.charleshotel.com" target="_blank">Charles Hotel website</a>. Once you're in the booking window, click on the "Groups" tab at the top of the page.</p>
+
+					<p class="smalltext">Enter the Attendee Code:<br />
+					<b>CELENEANDPHIL</b></p>
+				</div>	
+				<div id="acc_right">
+					<h3>EMBASSY SUITES</h3>
+					<p class="borderbottom" style="margin-top:0px;">123 Boston Post Road West<br />
+					Marlborough, MA 01752</p>
+					<p class="borderbottom" style="font-size:9pt;">King suites for 124.95 per night.<br />
+						Double suites for 139.95 per night.<br />
+						Rates based on 2-adult occupancy – each<br />
+						additional adult incurs a $10 per day fee;<br />
+						Children 18 and younger stay free<br />
+						<em>Rates held until June 17, 2012.</em>
+					</p>	
+					<h2>BY PHONE</h2>
+					<p class="borderbottom smalltext">Call (508)485-5900 to make reservations.</p>
+					<h2>ONLINE</h2>
+					<p class="smalltext">Use group code <b>CCW</b> to reserve online at the <a href="http://www.bostonmarlborough.embassysuites.com" target="_blank">Embassy Suites website</a>.</p>
+				</div>
+
+				<ul class="navmenu">
+					<li class="storybutton"><a href="#disabled" class="panel" title="This link has been disabled by request">Story</a></li>
+					<li class="partybutton"><a href="#disabled" class="panel" title="This link has been disabled by request">Party</a></li>
+					<li class="infobutton"><a href="#item24" class="panel">Info</a></li>
+					<li class="accommodationsbutton"><a href="#item13" class="panel">Accommodations</a></li>
+					<li class="registriesbutton"><a href="#item22" class="panel">Registries</a></li>
+					<li class="whattodobutton"><a href="#item17" class="panel">WhatToDo</a></li>
+				</ul>	
+            </div>
+        </div>
+
+        
+         <div id="item14" class="item">
+            <a name="item14"></a>
+            <div class="content"></div>
+        </div>
+    
+        <div id="item15" class="item">
+            <a name="item15"></a>
+            <div class="content"></div>
+        </div>        
+        
+		<div class="clear"></div>
+ 
+		<!-- fourth row -->
+       
+         <div id="item16" class="item">
+            <a name="item16"></a>
+            <div class="content"></div>
+        </div>
+
+		<div id="item17" class="item"><!--!What to Do in Boston-->
+            <a name="item17"></a>
+            <div class="content">
+				<img class="borderhome" src="assets/border_whattodo.png"></img>
+				<a href="#item1" class="panel"><img class="header" src="assets/header_whattodo.png" alt="Go back home" title="Go back home"></img></a>
+				<a href="#item18" class="panel"><img class="right" src="assets/toactivities.png"></img></a>
+				<div id="wtt_left">
+					<p class="greytext">Boston and Cambridge are inundated with great restaurants. Here are a few suggestions that are personal to us:</p>
+					<ul class="whattodolist">
+						<li>
+							<a href="http://www.henriettastable.com/" target="_blank"><h3>Henrietta's Table</h3></a>
+							<p class="noitalic">Charles Hotel, Harvard Square</p>
+							<p><span class="dialogue">C:</span> I love the lamb and cranberry walnut bread.</p>
+							<p><span class="dialogue">P:</span> They use seasonal and local food sources!</p>
+						</li>
+						<li>
+							<a href="http://petitrobertbistro.com" target="_blank"><h3>Le Petit Robert Bistro</h3></a>
+							<p class="noitalic">Columbus Ave, Boston</p>
+							<p><span class="dialogue">C:</span> THE BREAD. THE HOMEMADE PATE TRIO.</p>
+							<p><span class="dialogue">P:</span> Ditto.</p>
+						</li>
+						<li>
+							<a href="http://www.roddee.net" target="_blank"><h3>Rod Dee</h3></a>
+							<p class="noitalic">Porter Square, Cambridge</p>
+							<p><span class="dialogue">C:</span> Mmm, there's nothing like Indonesian Fried Rice. They have great Tom Yum Noodles too.</p>
+							<p><span class="dialogue">P:</span> Great staples like Pad Thai and Pineapple Fried Rice.</p>
+						</li>
+						<li>
+							<a href="http://www.annastaqueria.com" target="_blank"><h3>Anna's Taqueria</h3></a>
+							<p class="noitalic">Multiple locations</p>
+							<p><span class="dialogue">P:</span> The extra couple minute wait for the quesadilla is well worth it.</p>
+						</li>
+					</ul>
+				</div>
+				<div id="wtt_middle">
+					<ul class="whattodolist">
+						<li>
+							<a href="http://www.ernestosnorthend.com" target="_blank"><h3>Ernesto's Pizza</h3></a>
+							<p class="noitalic">North End, Boston</p>
+							<p><span class="dialogue">C:</span> Get a freshly made pie to share.</p>
+						</li>
+						<li>
+							<a href="http://www.berryline.com" target="_blank"><h3>Berryline</h3></a>
+							<p class="noitalic">Multiple locations</p>
+							<p><span class="dialogue">P:</span> Second only to Yogurtland.</p>
+						</li>
+						<li>
+							<a href="http://www.helmandrestaurant.com" target="_blank"><h3>The Helmand</h3></a>
+							<p class="noitalic">Lechmere, Cambridge</p>
+							<p><span class="dialogue">C:</span> Supposedly authentic food from Afghanistan. I can't seem to deviate from the vegetarian special.</p>
+						</li>
+						<li>
+							<a href="http://www.muquecarestaurant.com" target="_blank"><h3>Mu Que Ca</h3></a>	
+							<p class="noitalic">Inman Square, Cambridge</p>
+							<p><span class="dialogue">C:</span> Definitely try the restaurant's namesake.</p>
+						</li>	
+						<li>
+							<a href="http://oishiiboston.com" target="_blank"><h3>Oishii</h3></a>
+							<p class="noitalic">South End, Boston &amp; Chestnut Hill</p>
+							<p><span class="dialogue">P:</span> Best sushi in Boston! Try the South End location for fine dining and the Chestnut location for a shoulder-to-shoulder sushi experience.</p>
+						</li>
+						<li>
+							<a href="http://www.greekcorner.us" target="_blank"><h3>Greek Corner</h3></a>
+							<p class="noitalic">Cambridge</p>
+							<p><span class="dialogue">P:</span> Great gyros, falafel, and Greek fries.</p>
+						</li>
+					</ul>
+				</div>	
+				<div id="wtt_right">
+					<ul class="whattodolist">
+						<li>
+							<a href="http://masarestaurant.com" target="_blank"><h3>Masa</h3></a>
+							<p class="noitalic">South End, Boston; for Saturday brunch</p>
+							<p><span class="dialogue">C:</span> The BBQ mac and cheese is the best around.</p>
+							<p><span class="dialogue">P:</span> The Texas French Toast is a mile high and they have tasty drinks.</p>								
+						</li>
+						<li>
+							<a href="http://www.yelp.com/biz/cafe-mami-cambridge" target="_blank"><h3>Cafe Mami</h3></a>
+							<p class="noitalic">Porter Square, Cambridge</p>
+							<p><span class="dialogue">C:</span> If you like juicy fried chicken, try the Tetsuta.</p>
+							<p><span class="dialogue">P:</span> Hamburg!</p>
+						</li>
+						<li>
+							<a href="http://www.heilamoon.com" target="_blank"><h3>Hei La Moon</h3></a>
+							<p class="noitalic">Chinatown, Boston</p>
+							<p><span class="dialogue">C:</span> Our go-to dim sum place.</p>
+						</li>
+						<li>
+							<a href="http://www.mulan-ma.com" target="_blank"><h3>MuLan</h3></a>
+							<p class="noitalic">Inman Square, Cambridge</p>
+							<p><span class="dialogue">P:</span> Great Taiwanese restaurant with excellent dumplings, fresh or frozen!</p>
+						</li>
+						<li>
+							<a href="http://www.fiveguys.com" target="_blank"><h3>Five Guys</h3></a>
+							<p class="noitalic">Natick</p>
+							<p><span class="dialogue">C:</span> We found that not all Five Guys restaurants are the same, and we are consistently satisfied with this one.</p>
+						</li>
+					</ul>
+				</div>
+
+				<ul class="navmenu">
+					<li class="storybutton"><a href="#disabled" class="panel" title="This link has been disabled by request">Story</a></li>
+					<li class="partybutton"><a href="#disabled" class="panel" title="This link has been disabled by request">Party</a></li>
+					<li class="infobutton"><a href="#item24" class="panel">Info</a></li>
+					<li class="accommodationsbutton"><a href="#item13" class="panel">Accommodations</a></li>
+					<li class="registriesbutton"><a href="#item22" class="panel">Registries</a></li>
+					<li class="whattodobutton"><a href="#item17" class="panel">WhatToDo</a></li>
+				</ul>	
+            </div>            	
+        </div>
+
+		<div id="item18" class="item"><!--!What to Do in Boston 2-->
+            <a name="item18"></a>
+            <div class="content">
+            	<img class="borderhome" src="assets/border_whattodo.png" ></img>
+				<a href="#item1" class="panel"><img class="header" src="assets/header_whattodo.png" alt="Go back home" title="Go back home"></img></a>
+				<a href="#item17" class="panel"><img class="left" src="assets/todining.png"></img></a>
+				<div id="wtt_left2">
+					<p class="greytext">If you are looking for things to do while you're in town, here are some of our favorite summertime activities:</p>
+				</div>
+				<div id="wtt_right2">
+					<ul>
+						<li><a href="http://www.mass.gov/dcr/parks/walden/" target="_blank">Walden Pond</a></li>
+						<li><a href="http://www.richardsonsicecream.com" target="_blank">Richardson's Ice Cream and mini-golf</a></li>
+						<li><a href="http://www.celebrateboston.com/free-friday-flicks.htm" target="_blank">Friday flicks on the Esplanade</li>
+						<li><a href="http://www.redsox.com" target="_blank">Red Sox game</a></li>
+						<li>A picnic along the Charles</li>
+						<li>A walk in the Public Garden and Commons</li>
+						<li>Shopping along Newbury Street and Copley Square</li>
+						<li><a href="http://www.tazachocolate.com" target="_blank">TAZA chocolate factory tour</li>
+						<li><a href="http://www.highrock.org">Highrock!</a></li>
+						<li>Visiting the <a href="http://www.mfa.org" target="_blank">Museum of Fine Art</a>, <a href="http://www.icaboston.org" target="_blank">Institute of Contemporary Art</a>, or the <a href="http://www.gardnermuseum.org" target="_blank">Isabella Stewart Gardner</a></li>
+					</ul>
+				</div>
+				<ul class="navmenu">
+					<li class="storybutton"><a href="#disabled" class="panel" title="This link has been disabled by request">Story</a></li>
+					<li class="partybutton"><a href="#disabled" class="panel" title="This link has been disabled by request">Party</a></li>
+					<li class="infobutton"><a href="#item24" class="panel">Info</a></li>
+					<li class="accommodationsbutton"><a href="#item13" class="panel">Accommodations</a></li>
+					<li class="registriesbutton"><a href="#item22" class="panel">Registries</a></li>
+					<li class="whattodobutton"><a href="#item17" class="panel">WhatToDo</a></li>
+				</ul>
+            </div>
+        </div>
+
+		<div id="item19" class="item">
+            <a name="item19"></a>
+            <div class="content"></div>
+        </div>
+
+		<div id="item20" class="item">
+            <a name="item20"></a>
+            <div class="content"></div>
+        </div>
+
+        <div class="clear"></div>
+
+		<!--fifth row-->
+		<div id="item21" class="item">
+            <a name="item21"></a>
+            <div class="content"></div>
+        </div>
+
+		<div id="item22" class="item"><!--!Registries-->
+            <a name="item22"></a>
+            <div class="content">
+            	<img class="borderhome" src="assets/border_registries.png"></img>
+				<a href="#item1" class="panel"><img class="header" src="assets/header_registries.png" alt="Go back home" title="Go back home"></img></a>
+				<p class="greytext">If you would like to purchase gifts for our new home together, we have registries at <a href="http://www.amazon.com/gp/registry/wedding/EBB0CA8HOC73" target="_blank">Amazon</a> and <a href="http://www.crateandbarrel.com/Gift-Registry/Guest/View-Registry.aspx?grid=4828574" target="_blank">Crate and Barrel</a>.
+				<a href="http://www.crateandbarrel.com/Gift-Registry/Guest/View-Registry.aspx?grid=4828574" target="_blank"><img class="cb" src="assets/registries_cratebarrel.png" alt="Crate and Barrel"></img></a>
+				<a href="http://www.amazon.com/gp/registry/wedding/EBB0CA8HOC73" target="_blank"><img class="amazon" src="assets/registries_amazon.png" alt="Amazon" title="Amazon"></img></a>
+				<ul class="navmenu">
+					<li class="storybutton"><a href="#disabled" class="panel" title="This link has been disabled by request">Story</a></li>
+					<li class="partybutton"><a href="#disabled" class="panel" title="This link has been disabled by request">Party</a></li>
+					<li class="infobutton"><a href="#item24" class="panel">Info</a></li>
+					<li class="accommodationsbutton"><a href="#item13" class="panel">Accommodations</a></li>
+					<li class="registriesbutton"><a href="#item22" class="panel">Registries</a></li>
+					<li class="whattodobutton"><a href="#item17" class="panel">WhatToDo</a></li>
+				</ul>
+            </div>
+        </div>
+
+		<div id="item23" class="item">
+            <a name="item23"></a>
+            <div class="content"></div>
+        </div>
+
+		<div id="item24" class="item"><!--!Information-->
+            <a name="item24"></a>
+            <div class="content">
+            	<img class="borderhome" src="assets/border_info.png"></img>
+				<a href="#item1" class="panel"><img class="header" src="assets/header_info.png" alt="Go back home" title="Go back home"></img></a>
+				<img class="map" src="assets/info_map.png"></img>
+				<div class="info_content">
+					<h3>TOWER HILL BOTANIC GARDEN</h3>
+					<p class="borderbottom" style="margin-top:0px;">11 French Drive<br />
+					Boylston, MA 01505</p>
+					<h3>SATURDAY, JULY 28, 2012</h3>
+					Ceremony begins promptly at 6:00pm.<br />
+					<p style="font-size:9pt;" class="borderbottom">Please be seated by 5:45pm.<br />
+					<em>We highly recommend arriving early so you can enjoy the garden!</em></p>
+					<p class="greytext">The ceremony and reception will be held at <a href="http://www.towerhillbg.org/" target="_blank">Tower Hill Botanic Garden</a> in Boylston, MA. It is located near Worcester about one hour from Cambridge. Transportation will be available from the Charles Hotel in Harvard Square for out of town guests only. Seats are limited and must be reserved in advance. Ample free parking is available at the garden.</p>
+				</div>
+				<a href="http://g.co/maps/jw2z9" target="_blank"><img class="location" src="assets/info_garden.png" target="_blank" alt="Google Maps"></a>
+				<ul class="navmenu">
+					<li class="storybutton"><a href="#disabled" class="panel" title="This link has been disabled by request">Story</a></li>
+					<li class="partybutton"><a href="#disabled" class="panel" title="This link has been disabled by request">Party</a></li>
+					<li class="infobutton"><a href="#item24" class="panel">Info</a></li>
+					<li class="accommodationsbutton"><a href="#item13" class="panel">Accommodations</a></li>
+					<li class="registriesbutton"><a href="#item22" class="panel">Registries</a></li>
+					<li class="whattodobutton"><a href="#item17" class="panel">WhatToDo</a></li>
+				</ul>
+            </div>
+        </div>
+
+		<div id="item25" class="item">
+            <a name="item25"></a>
+            <div class="content"></div>
+        </div> 
+
+    </div> <!--mask-->
+</div> <!--wrapper-->
+
+</body>
+</html>
