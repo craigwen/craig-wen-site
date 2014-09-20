@@ -8,26 +8,10 @@
 	"buffers":
 	[
 		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 11146,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "css/styles.css",
 			"settings":
 			{
-				"buffer_size": 5427,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "js/myscripts.js",
-			"settings":
-			{
-				"buffer_size": 0,
+				"buffer_size": 5206,
 				"line_ending": "Unix"
 			}
 		}
@@ -66,6 +50,8 @@
 	},
 	"file_history":
 	[
+		"/Users/craigwen/Sites/Craig Site/js/myscripts.js",
+		"/Users/craigwen/Sites/Craig Site/index.html",
 		"/Users/craigwen/Dropbox/Ad Hoc/js/myscripts-playlist.js",
 		"/Users/craigwen/Dropbox/Ad Hoc/css/styles-playlist.css",
 		"/Users/craigwen/Dropbox/Ad Hoc/index.html",
@@ -113,53 +99,29 @@
 	"groups":
 	[
 		{
+			"sheets":
+			[
+			]
+		},
+		{
 			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 11146,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5324,
-								5324
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "css/styles.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5427,
+						"buffer_size": 5206,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								3812,
+								3812
 							]
 						],
 						"settings":
@@ -168,38 +130,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2573.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "js/myscripts.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -222,11 +156,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
