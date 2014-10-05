@@ -8,10 +8,18 @@
 	"buffers":
 	[
 		{
-			"file": "css/styles.css",
+			"file": "/Users/craigwen/Sites/Craig Site/index.html",
 			"settings":
 			{
-				"buffer_size": 5206,
+				"buffer_size": 11241,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "styles-redesign.css",
+			"settings":
+			{
+				"buffer_size": 5413,
 				"line_ending": "Unix"
 			}
 		}
@@ -99,8 +107,38 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/Users/craigwen/Sites/Craig Site/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11241,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		},
 		{
@@ -108,20 +146,20 @@
 			"sheets":
 			[
 				{
-					"buffer": 0,
-					"file": "css/styles.css",
+					"buffer": 1,
+					"file": "styles-redesign.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5206,
+						"buffer_size": 5413,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3812,
-								3812
+								0,
+								0
 							]
 						],
 						"settings":
@@ -130,7 +168,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2441.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -211,7 +249,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
